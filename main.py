@@ -19,4 +19,14 @@ class serviceQueue:
         self.rear = new_node
         self.queue_count += 1
 
-    def fill_the_order
+    def fill_the_order(self):
+        if self.isEmpty():
+            return "No orders"
+        temp = self.front
+        self.front = temp.next
+        self.queue_count -= 1
+        if self.front is None:
+            self.rear = None
+        return temp.data
+
+    
