@@ -32,7 +32,7 @@ class serviceQueue:
     def first_order(self):
         if self.isEmpty():
             return "No orders"
-        return self.front.data
+        return self.front.customer_name
 
     def isEmpty(self):
         return self.queue_count == 0
