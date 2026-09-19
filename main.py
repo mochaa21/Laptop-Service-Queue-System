@@ -55,3 +55,6 @@ workshop.view_queue()
 
 print("Start working on:", workshop.fill_the_order())
 print("Start working on:", workshop.fill_the_order())
+
+print("Remaining queue: ")
+workshop.view_queue()
