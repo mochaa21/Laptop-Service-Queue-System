@@ -27,7 +27,7 @@ class serviceQueue:
         self.queue_count -= 1
         if self.front is None:
             self.rear = None
-        return temp.data
+        return temp.customer_name
 
     def first_order(self):
         if self.isEmpty():
@@ -40,7 +40,7 @@ class serviceQueue:
     def view_queue(self):
         temp = self.front
         while temp:
-            print(temp.data, end=" -> ")
+            print(temp.customer_name, end=" -> ")
             temp = temp.next
         print()
 
