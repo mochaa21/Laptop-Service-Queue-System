@@ -29,4 +29,29 @@ class serviceQueue:
             self.rear = None
         return temp.data
 
-    
+    def first_order(self):
+        if self.isEmpty():
+            return "No orders"
+        return self.front.data
+
+    def isEmpty(self):
+        return self.queue_count == 0
+
+    def view_queue(self):
+        temp = self.front
+        while temp:
+            print(temp.data, end=" -> ")
+            temp = temp.next
+        print()
+
+workshop = serviceQueue()
+
+workshop.accept_orders("Client A (Asus ROG)")
+workshop.accept_orders("Client B (Lenovo Thinkpad)")
+workshop.accept_orders("Client C (Acer Nitro)")
+
+print("Entry queue list:")
+workshop.view_queue()
+
+print("Start working on:", workshop.fill_the_order())
+print("Start working on:", workshop.fill_the_order())
